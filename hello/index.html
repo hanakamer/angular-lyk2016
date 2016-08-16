@@ -1,0 +1,33 @@
+<!-- DATA BINDING, model kisimindaki degisiklikleri direkt olarak  view'a yansitmak,
+ayni sekilde view kismindaki degisiklikleri de modele yansitmak icin kullanilir. -->
+
+<!-- CONTROLLER, DOM elemanlarinin arkasindaki davranislari kontrol eden kisimdir.
+AnularJS, dom elemanlarinin davranislarini temiz bi sekilde ifade etmemizi saglar. -->
+
+<!DOCTYPE html>
+<!-- ng-app AngularJS in nerede aktif olacagini belirtir
+suanki durumda butun sayfa -->
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <!-- ng-model, form ile modeli birbirine baglar
+      buradaki her degisiklik modelinize yansir
+      control de olan her degisiklik modele,
+      modelde olan her degisiklik controle yansitilir -->
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <!-- html icinde verinizi baglamak icin
+      yourName degisitiginde burdaki yazi da degisir -->
+      <h1>hello {{yourName}}</h1>
+    </div>
+    <!-- angularJS i yukledik -->
+    <script type="text/javascript" src="../angular.min.js"></script>
+  </body>
+</html>
